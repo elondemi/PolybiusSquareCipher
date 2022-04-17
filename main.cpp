@@ -58,4 +58,22 @@ int main(){
     }
     string pt, encpt, decpt;
     string e, d;
-    
+    while (e != "perfundo") {
+        cout << "\n Deshironi te vazhdoni me encrypt apo decrypt? " << endl;
+        cin >> e;
+        if (e == "encrypt") {
+            cout << "Sheno plaintext-in: ";
+            cin >> pt;
+            encpt = encrypt(pt);
+            cout << "Teksti i enkriptuar: " << encpt;
+        } else if (e == "decrypt") {
+            cout << "Sheno kodin e enkriptuar: ";
+            cin >> encpt;
+            decpt = decrypt(encpt);
+            cout << "\n Teksti i dekriptuar: " << decpt;
+        }
+    }
+    cout << "\n Kriptimi ka perfunduar !!!" ;
+    return 0;
+
+}
