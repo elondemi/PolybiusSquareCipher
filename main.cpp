@@ -26,4 +26,21 @@ string encrypt(string pt)
             }
     return encpt;
 }
+string decrypt(string encpt)
+{
+    string decpt = "";
+    int l = encpt.length();
+    char decpt1[l+1];
+    strcpy(decpt1, encpt.c_str());
+    for (int i = 0; i < l; i = i + 2) {
+        int row, col;
+        row = decpt1[i];
+        row-= 48;
+        col = decpt1[i+1];
+        col-= 48;
+        string s(1, table[row - 1][col - 1]);
+        decpt = decpt + s;
+    }
+    return decpt;
+}
 
