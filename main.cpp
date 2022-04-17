@@ -43,4 +43,19 @@ string decrypt(string encpt)
     }
     return decpt;
 }
-
+int main(){
+    int num = 65, i = 0;
+    while (num<=90)
+    {
+        if(num!=74)
+        {
+            int j = i/5;
+            char ch = num;
+            table[j][i%5] = ch;
+            i++;
+        }
+        num++;
+    }
+    string pt, encpt, decpt;
+    string e, d;
+    
